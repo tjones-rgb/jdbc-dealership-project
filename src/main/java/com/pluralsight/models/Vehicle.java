@@ -1,5 +1,5 @@
 package com.pluralsight.models;
-
+public class Vehicle {
 
 private int vin;
 private int year;
@@ -84,7 +84,7 @@ public double getPrice() {
 public void setPrice(double price) {
     this.price = price;
 }
-//com.pluralsight.Vehicle(vin,year,make,model,vehicleType,color,odometer,price)
+//com.pluralsight.com.pluralsight.models.Vehicle(vin,year,make,model,vehicleType,color,odometer,price)
 
 
 

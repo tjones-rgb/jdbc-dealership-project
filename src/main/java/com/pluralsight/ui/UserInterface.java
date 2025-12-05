@@ -3,8 +3,9 @@ package com.pluralsight.ui;
 import com.pluralsight.Contract;
 import com.pluralsight.ContractFileManager;
 import com.pluralsight.DealershipFileManager;
-import com.pluralsight.LeaseContract;
-import com.pluralsight.SalesContract;
+import com.pluralsight.models.Dealership;
+import com.pluralsight.models.LeaseContract;
+import com.pluralsight.models.SalesContract;
 
 import java.util.List;
 import java.util.Scanner;

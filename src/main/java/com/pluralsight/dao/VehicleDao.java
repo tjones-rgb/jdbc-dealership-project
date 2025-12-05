@@ -2,6 +2,7 @@ package com.pluralsight.dao;
 
 
 import com.pluralsight.Database;
+import com.pluralsight.models.Vehicle;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -64,7 +65,7 @@ public class VehicleDao {
         }
         return  list;
     }
-    public LIst<Vehicle> getYearRange(int min, int max) {
+    public List<Vehicle> getYearRange(int min, int max) {
         List<Vehicle> list = new ArrayList<>();
         String sql = "SELECT * FROM vehicles WHERE year BETWEEN ? AND ? AND sold = )";
 

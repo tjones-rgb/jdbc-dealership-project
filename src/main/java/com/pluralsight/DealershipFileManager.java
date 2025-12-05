@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import com.pluralsight.models.Dealership;
+
 import java.io.*;
 import java.util.ArrayList;
 
