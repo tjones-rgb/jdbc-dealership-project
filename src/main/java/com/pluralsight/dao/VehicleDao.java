@@ -25,7 +25,7 @@ public class VehicleDao {
                 rs.getString("model"),
                 rs.getInt("year"),
                 rs.getString("color"),
-                rs.getDouble("price")
+                rs.getDouble("price"),
                 rs.getBoolean("sold")
         );
     }
@@ -82,5 +82,24 @@ public class VehicleDao {
         }
         return list;
     }
-    public List<Vehicle>
+    public List<Vehicle> getByColor(String color) {
+        List<Vehicle>  list = new ArrayList<>();
+        String sql = "SELECT * FROM vehicles WHERE year BETWEEN ? AND ? AND sold = )";
+
+        try(Connection conn = getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, color);
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) list.add(mapRow(rs));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+    public List<Vehicle> getByMileage(int min, int max) {
+        List<Vehicle> list = new ArrayList<>();
+        return list;
+    }
 }
